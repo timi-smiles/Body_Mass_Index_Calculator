@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="bmi">
+        <div class="bmi__definition">
+          <div class="bmi__logo">
+            <img src="assets/images/logo.svg" alt="" />
+          </div>
+          <div class="bmi__content">
+            <div class="bmi__content-heading heading-lg">
+              Body Mass <br />Index Calculator
+            </div>
+            <p class="bmi__content-p text-md">
+              Better understand your weight in relation to your height using our
+              body mass index (BMI) calculator. While BMI is not the sole
+              determinant of a healthy weight, it offers a valuable starting
+              point to evaluate your overall health and well-being.
+            </p>
+          </div>
+        </div>
+
+        <div class="bmi__details-box">
+          <div class="bmi__details">
+            <div class="bmi__details-heading heading-md">
+              Enter your details below
+            </div>
+
+            <div class="bmi__details-units">
+              <div class="bmi__details-unit-box">
+                <input
+                  class="bmi__radiobtn"
+                  type="radio"
+                  id="metric"
+                  name="units"
+                  checked
+                />
+                <label for="metric" class="bmi__radio-label text-md-bold"
+                  >Metric</label
+                >
+              </div>
+
+              <div class="bmi__details-unit-box">
+                <input
+                  class="bmi__radiobtn"
+                  type="radio"
+                  id="imperial"
+                  name="units"
+                />
+                <label for="imperial" class="bmi__radio-label text-md-bold"
+                  >Imperial</label
+                >
+              </div>
+            </div>
+
+            <div class="bmi__details-calc">
+              <div class="bmi__details-parameter-box">
+                <label for="Height" class="text-label text-md">Height</label>
+                <div class="bmi__details-particulars-parameter">
+                  <input
+                    class="bmi__details-parameter parameter__height heading-md"
+                    type="text"
+                    id="Height"
+                    placeholder=""
+                    value="0"
+                  />
+                  <span class="bmi__details-suffix heading-md">cm</span>
+                </div>
+              </div>
+
+              <div class="bmi__details-parameter-box">
+                <label for="Weight" class="text-label text-md">Weight</label>
+                <div class="bmi__details-particulars-parameter">
+                  <input
+                    class="bmi__details-parameter parameter__weight heading-md"
+                    type="text"
+                    id="Weight"
+                    placeholder=""
+                    value="0"
+                  />
+                  <span class="bmi__details-suffix heading-md">kg</span>
+                </div>
+              </div>
+
+              <div class="bmi__details-particulars-imperial">
+                <div class="bmi__details-imperialPairs hide">
+                  <div class="bmi__imperial">
+                    <label for="Height" class="text-label text-md"
+                      >Height</label
+                    >
+                    <div class="bmi__details-imperial-parameter">
+                      <div class="bmi__details-particulars-parameter">
+                        <input
+                          class="bmi__details-parameter-imperial parameter-imperial-ft heading-md"
+                          type="text"
+                          id="Height"
+                          placeholder=""
+                          value="0"
+                        />
+                        <span class="bmi__details-suffix heading-md">ft</span>
+                      </div>
+
+                      <div class="bmi__details-particulars-parameter">
+                        <input
+                          class="bmi__details-parameter-imperial parameter-imperial-in heading-md"
+                          type="text"
+                          id="Height"
+                          placeholder=""
+                          value="0"
+                        />
+                        <span class="bmi__details-suffix heading-md">in</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bmi__details-imperialPairs hide">
+                  <div class="bmi__imperial">
+                    <label for="Weight" class="text-label text-md"
+                      >Weight</label
+                    >
+                    <div class="bmi__details-imperial-parameter">
+                      <div class="bmi__details-particulars-parameter">
+                        <input
+                          class="bmi__details-parameter-imperial parameter-imperial-st heading-md"
+                          type="text"
+                          id="Height"
+                          placeholder=""
+                          value="0"
+                        />
+                        <span class="bmi__details-suffix heading-md">st</span>
+                      </div>
+
+                      <div class="bmi__details-particulars-parameter">
+                        <input
+                          class="bmi__details-parameter-imperial parameter-imperial-lbs heading-md"
+                          type="text"
+                          id="Height"
+                          placeholder=""
+                          value="0"
+                        />
+                        <span class="bmi__details-suffix heading-md">lbs</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bmi__welcome">
+              <h1 class="heading-md">Welcome!</h1>
+
+              <p class="text-sm">
+                Enter your height and weight and you’ll see your BMI result here
+              </p>
+            </div>
+
+            <div class="bmi__result hide">
+              <div class="bmi__result-box">
+                <p class="text-md-bold">Your BMI is...</p>
+
+                <h1 class="bmi__result-value heading-lg">score</h1>
+              </div>
+
+              <p class="bmi__result-remarks text-md result__box">
+                Your BMI suggests you're
+                <span class="bmi__result-class">add classification</span>. Your
+                ideal weight range is between
+
+                <span class="bmi__result-range text-md-bold"> add range.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bmi__path-left">
+        <img src="assets/images/pattern-curved-line-left.svg" alt="" />
+      </div>
+
+      <div class="bmi__meaning">
+        <div>
+          <img
+            src="assets/images/image-man-eating.webp"
+            alt=""
+            class="bmi__meaning-picture"
+          />
+        </div>
+
+        <div class="bmi__meaning-explaination">
+          <h1 class="bmi__meaning-explaination-heading text-lg">
+            What your BMI result means
+          </h1>
+
+          <p class="bmi__meaning-explaination-text text-md">
+            A BMI range of 18.5 to 24.9 is considered a 'healthy weight'.
+            Maintaining a healthy weight may lower your chances of experiencing
+            health issues later on, such as obesity and type 2 diabetes. Aim for
+            a nutritious diet with reduced fat and sugar content, incorporating
+            ample fruits and vegetables. Additionally, strive for regular
+            physical activity, ideally about 30 minutes daily for five days a
+            week.
+          </p>
+        </div>
+      </div>
+
+      <div class="bmi__habits">
+        <div class="bmi__habits-content">
+          <div>
+            <img
+              src="assets/images/icon-eating.svg"
+              alt=""
+              class="bmi__habits-logo"
+            />
+          </div>
+
+          <div class="bmi__habits-content-box">
+            <h1 class="bmi__habits-heading heading-md">Healthy eating</h1>
+            <p class="bmi__habits-text text-md">
+              Healthy eating promotes weight control, disease prevention, better
+              digestion, immunity, mental clarity, and mood.
+            </p>
+          </div>
+        </div>
+
+        <div class="bmi__habits-content">
+          <div>
+            <img
+              src="assets/images/icon-exercise.svg"
+              alt=""
+              class="bmi__habits-logo"
+            />
+          </div>
+
+          <div class="bmi__habits-content-box">
+            <h1 class="bmi__habits-heading heading-md">Regular excercise</h1>
+            <p class="bmi__habits-text text-md">
+              Exercise improves fitness, aids weight control, elevates mood, and
+              reduces disease risk, fostering wellness and longevity.
+            </p>
+          </div>
+        </div>
+
+        <div class="bmi__habits-content">
+          <div>
+            <img
+              src="assets/images/icon-sleep.svg"
+              alt=""
+              class="bmi__habits-logo"
+            />
+          </div>
+          <div class="bmi__habits-content-box">
+            <h1 class="bmi__habits-heading heading-md">Adequate sleep</h1>
+            <p class="bmi__habits-text text-md">
+              Sleep enhances mental clarity, emotional stability, and physical
+              wellness, promoting overall restoration and rejuvenation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bmi__limitations">
+        <div class="bmi__limitations-box">
+          <div class="bmi__limitations-heading text-lg">Limitations of BMI</div>
+          <div class="bmi__limitations-text text-md">
+            Although BMI is often a practical indicator of healthy weight, it is
+            not suited for every person. Specific groups should carefully
+            consider their BMI outcomes, and in certain cases, the measurement
+            may not be beneficial to use.
+          </div>
+        </div>
+
+        <div class="bmi__limitations-categories">
+          <div class="bmi__limitations-category">
+            <div class="bmi__limitations-category-info">
+              <div class="bmi__limitations-category-logo">
+                <img src="assets/images/icon-gender.svg" alt="" />
+              </div>
+              <div class="bmi__limitations-category-heading heading-sm">
+                Gender
+              </div>
+            </div>
+
+            <div class="bmi__limitations-category-description text-md">
+              The development and body fat composition of girls and boys vary
+              with age. Consequently, a child's age and gender are considered
+              when evaluating their BMI.
+            </div>
+          </div>
+
+          <div class="bmi__path-right">
+            <img src="assets/images/pattern-curved-line-right.svg" alt="" />
+          </div>
+
+          <div class="bmi__limitations-category">
+            <div class="bmi__limitations-category-info">
+              <div class="bmi__limitations-category-logo">
+                <img src="assets/images/icon-age.svg" alt="" />
+              </div>
+              <div class="bmi__limitations-category-heading heading-sm">
+                Age
+              </div>
+            </div>
+
+            <div class="bmi__limitations-category-description text-md">
+              In aging individuals, increased body fat and muscle loss may cause
+              BMI to underestimate body fat content.
+            </div>
+          </div>
+
+          <div class="bmi__limitations-category">
+            <div class="bmi__limitations-category-info">
+              <div class="bmi__limitations-category-logo">
+                <img src="assets/images/icon-muscle.svg" alt="" />
+              </div>
+              <div class="bmi__limitations-category-heading heading-sm">
+                Muscle
+              </div>
+            </div>
+
+            <div class="bmi__limitations-category-description text-md">
+              BMI may misclassify muscular individuals as overweight or obese,
+              as it doesn't differentiate muscle from fat.
+            </div>
+          </div>
+
+          <div class="bmi__limitations-category">
+            <div class="bmi__limitations-category-info">
+              <div class="bmi__limitations-category-logo">
+                <img src="assets/images/icon-pregnancy.svg" alt="" />
+              </div>
+              <div class="bmi__limitations-category-heading heading-sm">
+                Pregnancy
+              </div>
+            </div>
+
+            <div class="bmi__limitations-category-description text-md">
+              Expectant mothers experience weight gain due to their growing
+              baby. Maintaining a healthy pre-pregnancy BMI is advisable to
+              minimise health risks for both mother and child.
+            </div>
+          </div>
+
+          <div class="bmi__limitations-category">
+            <div class="bmi__limitations-category-info">
+              <div class="bmi__limitations-category-logo">
+                <img src="assets/images/icon-race.svg" alt="" />
+              </div>
+              <div class="bmi__limitations-category-heading heading-sm">
+                Race
+              </div>
+            </div>
+
+            <div class="bmi__limitations-category-description text-md">
+              Certain health concerns may affect individuals of some Black and
+              Asian origins at lower BMIs than others. To learn more, it is
+              advised to discuss this with your GP or practice nurse.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
